@@ -1,0 +1,170 @@
+html {
+	height: 100%;
+}
+html * {
+	line-height: 1.2;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+body {
+	height: 100%;
+	color: $colorBase;
+	font-family: 'Avenir Next', sans-serif;
+	background: #ffffff url('../img/bg.jpg') no-repeat 50% 50% / cover;
+	-webkit-tap-highlight-color: transparent;
+}
+input,
+textarea,
+select {
+	font-family: 'Avenir Next', sans-serif;
+	border-width: 0;
+	outline: none;
+}
+::-webkit-input-placeholder {
+	color: lighten($colorBase, 70%);
+}
+:-moz-placeholder {
+	color: lighten($colorBase, 70%);
+}
+::-moz-placeholder {
+	color: lighten($colorBase, 70%);
+}
+:-ms-input-placeholder {
+	color: lighten($colorBase, 70%);
+}
+button {
+	cursor: pointer;
+	background-color: transparent;
+	outline: none;
+	border-width: 0;
+}
+.title {
+	font-size: 44px;
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
+	
+	@media (max-width: $tablet) {
+		font-size: 36px;
+	}
+			
+	@media (max-width: $mobile) {
+		font-size: 30px;
+	}
+}
+.checker {
+	display: none;
+	
+	&__label {
+		position: relative;
+		display: inline-block;
+		width: 56px;
+		height: 56px;
+		cursor: pointer;
+		border-radius: 16px;
+		box-shadow: 0 3px 15px rgba(181, 181, 181, 0.5);
+		
+		@media (max-width: $tablet) {
+			width: 46px;
+			height: 46px;
+		}
+		
+		@media (max-width: $mobile) {
+			width: 32px;
+			height: 32px;
+		}
+		
+		&:before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 20px;
+			height: 20px;
+			background: url('../img/icon-check.svg') no-repeat 50% 50%;
+			margin: -10px 0 0 -10px;
+			opacity: 0;
+			visibility: hidden;
+			
+			@media (max-width: $tablet) {
+				transform: scale(.85)
+			}
+			
+			@media (max-width: $mobile) {
+				transform: scale(.65)
+			}
+		}
+	}
+	
+	&:checked {
+		+ .checker__label {
+			background-image: linear-gradient(-211.95deg, #21d881 0%, #0eaf4a 100%);
+			box-shadow: 0 5px 15px rgba(20, 188, 92, 0.5);
+			
+			&:before {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}
+.remove {
+	position: relative;
+	display: inline-block;
+	width: 74px;
+	height: 74px;
+	border-radius: 50%;
+	border: 1px solid #f63d72;
+	
+	@media (max-width: $tablet) {
+		width: 64px;
+		height: 64px;
+	}
+	
+	@media (max-width: $mobile) {
+		width: 32px;
+		height: 32px;
+	}
+	
+	&:before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 34px;
+		height: 40px;
+		margin: -20px 0 0 -17px;
+		background: url('../img/icon-trash.svg') no-repeat 50% 50%;
+		
+		@media (max-width: $tablet) {
+			transform: scale(.85);
+		}
+		
+		@media (max-width: $mobile) {
+			transform: scale(.4);
+		}
+	}
+}
+.btn {
+	display: inline-block;
+	min-width: 230px;
+	color: $colorLight;
+	font-size: 22px;
+	font-weight: 600;
+	text-align: center;
+	padding: 19px 24px;
+	background-image: linear-gradient(-22.44deg, #5c8dff 0%, #2ae335 100%);
+	box-shadow: 0 4px 15px #99b8cd;
+	border-radius: 32px;
+	
+	@media (max-width: $tablet) {
+		min-width: 200px;
+		font-size: 20px;
+	}
+	
+	@media (max-width: $mobile) {
+		min-width: 160px;
+		font-size: 20px;
+		padding: 14px 19px;
+	}
+}

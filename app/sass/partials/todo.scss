@@ -1,0 +1,252 @@
+.todo {
+	max-width: 1060px;
+	margin: 0 auto;
+	
+	&__body {
+		padding: 69px 40px 40px;
+		
+		@media (max-width: $tablet) {
+			padding: 30px 20px 20px;
+		}
+		
+		@media (max-width: $mobile) {
+			padding: 30px 15px 20px;
+		}
+	}
+	
+	&__title {
+		margin-bottom: 41px;
+		
+		@media (max-width: $tablet) {
+			margin-bottom: 30px;
+		}
+		
+		@media (max-width: $mobile) {
+			margin-bottom: 25px;
+		}
+	}
+		
+	&__item {
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 26px;
+		filter: drop-shadow(0 9px 50px rgba(0, 0, 0, 0.1));
+
+		@media (max-width: $tablet) {
+			margin-bottom: 20px;
+		}
+		
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 40px;
+			width: 100%;
+			height: 3px;
+			background-color: $colorDefault;
+			transform: rotate(-26.565deg);
+			transform-origin: 0 0;
+
+			@media (max-width: $tablet) {
+				top: 30px;
+			}
+			
+			@media (max-width: $mobile) {
+				top: 20px;
+				height: 2px;
+			}
+		}
+
+		&.is-success {
+			filter: drop-shadow(0 9px 50px rgba(0, 221, 118, 0.2));
+			
+			&:after {
+				background-color: $colorSuccess;
+			}
+			
+			.todo {
+				&__row {
+					border-color: $colorSuccess;
+				}
+				
+				&__title {
+					color: #11b654;
+				}
+			}
+		}
+		
+	}
+	
+	&__row {
+		background-color: #ffffff;
+		border: 3px solid $colorDefault;
+		border-radius: 40px;
+		clip-path: polygon(80px 0, 100% 0, 100% 100%, 0 100%, 0% 40px);
+
+		@media (max-width: $tablet) {
+			border-radius: 30px;
+			clip-path: polygon(60px 0, 100% 0, 100% 100%, 0 100%, 0% 30px);
+		}
+		
+		@media (max-width: $mobile) {
+			border-width: 2px;
+			border-radius: 15px;
+			clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0% 20px);
+		}
+		
+		&_exists {
+			display: flex;
+			align-items: center;
+			min-height: 160px;
+			padding: 28px 18px 28px 28px;
+			
+			@media (max-width: $tablet) {
+				min-height: 135px;
+				padding: 20px 10px 20px 20px;
+			}
+			
+			@media (max-width: $mobile) {
+				min-height: 124px;
+				padding: 20px 8px 20px 8px;
+			}
+		}
+		
+		&_add {
+			padding: 38px 20px 20px 81px;
+
+			@media (max-width: $tablet) {
+				padding: 30px 20px 20px 40px;
+			}
+			
+			@media (max-width: $mobile) {
+				padding: 30px 15px 20px 15px;
+			}
+		}
+	}
+	
+	&__col {
+		display: flex;
+		padding: 0 18px;
+
+		@media (max-width: $tablet) {
+			padding: 0 10px;
+		}
+
+		@media (max-width: $mobile) {
+			padding: 0 8px;
+		}
+		
+		&_wide {
+			flex: 1;
+		}
+	}
+	
+	&-list {
+		margin-bottom: 43px;
+		
+		@media (max-width: $tablet) {
+			margin-bottom: 30px;
+		}
+	}
+		
+	&__content {
+		max-width: 620px;
+	
+		@media (max-width: $tablet) {
+			max-width: none;
+		}
+	}
+	
+	&__name {
+		font-size: 30px;
+		font-weight: 600;
+		letter-spacing: .01em;
+		margin-bottom: 10px;
+
+		@media (max-width: $tablet) {
+			font-size: 26px;
+		}
+		
+		@media (max-width: $mobile) {
+			font-size: 22px;
+		}
+		
+		&_holder {
+			color: lighten($colorBase, 70%);
+		}
+	}
+	
+	&__text {
+		font-size: 22px;
+		line-height: 26px;
+			
+		@media (max-width: $tablet) {
+			font-size: 20px;
+			line-height: 24px;
+		}
+		
+		@media (max-width: $mobile) {
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+	
+	&__divider {
+		margin-bottom: 43px;
+		border-bottom: 2px dashed #000000;
+			
+		@media (max-width: $tablet) {
+			margin-bottom: 30px;
+		}
+	}
+	
+	&-add {
+		margin-top: 43px;
+			
+		@media (max-width: $tablet) {
+			margin-top: 30px;
+		}
+		
+		&__title {
+			display: block;
+			font-size: 24px;
+			font-weight: 600;
+			text-align: center;
+			text-transform: uppercase;
+			margin-bottom: 26px;
+
+			@media (max-width: $tablet) {
+				font-size: 20px;
+				margin-bottom: 20px;
+			}
+			
+			@media (max-width: $mobile) {
+				font-size: 18px;
+			}
+		}
+		
+		&__area {
+			display: block;
+			width: 100%;
+			font-size: 22px;
+			resize: none;
+			padding: 20px 0 10px;
+			margin-top: 16px;
+			border-top: 1px solid rgba(151, 151, 151, .2);
+		
+			@media (max-width: $tablet) {
+				font-size: 20px;
+			}
+			
+			@media (max-width: $mobile) {
+				font-size: 16px;
+			}
+		}
+		
+		&__action {
+			position: relative;
+			text-align: right;
+			margin-top: 6px;
+		}
+	}
+}

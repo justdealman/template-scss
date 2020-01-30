@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<title>Todo app</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<link href="./css/styles.css" rel="stylesheet">
+	<body>
+		<div class="todo">
+			<div class="todo__body">
+				<section class="todo-list">
+					<h1 class="title todo__title">Список</h1>
+					<article class="todo__item is-success">
+						<div class="todo__row todo__row_exists">
+							<div class="todo__col">
+								<input type="checkbox" id="todo-1" class="checker" checked disabled>
+								<label class="checker__label" for="todo-1"></label>
+							</div>
+							<div class="todo__col todo__col_wide">
+								<div class="todo__content">
+									<h2 class="todo__name">Задача</h2>
+									<p class="todo__text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</p>
+								</div>
+							</div>
+							<div class="todo__col">
+								<button class="remove"></button>
+							</div>
+						</div>
+					</article>
+					<article class="todo__item">
+						<div class="todo__row todo__row_exists">
+							<div class="todo__col">
+								<input type="checkbox" id="todo-1" class="checker" disabled>
+								<label class="checker__label" for="todo-1"></label>
+							</div>
+							<div class="todo__col todo__col_wide">
+								<div class="todo__content">
+									<h2 class="todo__name">Задача</h2>
+									<p class="todo__text">Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые.</p>
+								</div>
+							</div>
+							<div class="todo__col">
+								<button class="remove"></button>
+							</div>
+						</div>
+					</article>
+					<article class="todo__item">
+						<div class="todo__row todo__row_exists">
+							<div class="todo__col">
+								<input type="checkbox" id="todo-1" class="checker" disabled>
+								<label class="checker__label" for="todo-1"></label>
+							</div>
+							<div class="todo__col todo__col_wide">
+								<div class="todo__content">
+									<h2 class="todo__name">Задача</h2>
+									<p class="todo__text">Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML.</p>
+								</div>
+							</div>
+							<div class="todo__col">
+								<button class="remove"></button>
+							</div>
+						</div>
+					</article>
+				</section>
+				<div class="todo__divider"></div>
+				<section class="todo-add">
+					<span class="todo-add__title">Новая</span>
+					<div class="todo__item">
+						<div class="todo__row todo__row_add">
+							<span class="todo__name todo__name_holder">Название задачи</span>
+							<textarea class="todo-add__area" rows="1" placeholder="Описание задачи"></textarea>
+							<div class="todo-add__action">
+								<button class="btn">Добавить</button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>
